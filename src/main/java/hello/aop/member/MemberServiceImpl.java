@@ -1,7 +1,7 @@
-package hello.aop.order.aop.member;
+package hello.aop.member;
 
-import hello.aop.order.aop.member.annotation.ClassAop;
-import hello.aop.order.aop.member.annotation.MethodAop;
+import hello.aop.member.annotation.ClassAop;
+import hello.aop.member.annotation.MethodAop;
 import org.springframework.stereotype.Component;
 
 @ClassAop
@@ -13,7 +13,7 @@ public class MemberServiceImpl implements MemberService {
         return "ok";
     }
 
-    public String internal(String paran) {
+    public String internal(String param) {
         return "ok";
     }
 }
