@@ -5,14 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.aspectj.AspectJExpressionPointcut;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.lang.reflect.Method;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
-@SpringBootTest
 public class ExecutionTest {
 
     AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
@@ -110,6 +108,7 @@ public class ExecutionTest {
         pointcut.setExpression("execution(* hello.aop.*.*(..))");
         assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isFalse();
     }
+
     /*
     hello.aop..*
     .. 닷닷으로 해야 하위 패키지 포함됨.
