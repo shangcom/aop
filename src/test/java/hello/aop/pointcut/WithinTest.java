@@ -14,6 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * within은 타입(경로)가 정확히 일치해야만 매칭된다.
  * 부모 타입 클래스, 인터페이스로 자식의 메서드에 매칭 못한다.
+ * 자식 클래스를 지정하면, 부모 클래스에서 상속 받은 메서드는 포인트컷에 매칭되지 않는다.
  */
 @Slf4j
 public class WithinTest {
