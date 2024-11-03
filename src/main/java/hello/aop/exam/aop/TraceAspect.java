@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class TraceAspect {
     @Before("@annotation(hello.aop.exam.annotation.Trace)")
-    public void logTrace(JoinPoint joinPoint) {
+    public void doTrace(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
         log.info("[trace] {} args = {}", joinPoint.getSignature(), args);
     }
