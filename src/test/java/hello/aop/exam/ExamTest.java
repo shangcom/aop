@@ -20,13 +20,13 @@ class ExamTest {
     void request() {
         // Arrange
         // TODO: Initialize test data
+
+        // Act
+        // TODO: Call the method to be tested
         for (int i = 0; i < 5; i++) {
             log.info("client request count = {}", i + 1);
             examService.request("data" + i);
         }
-
-        // Act
-        // TODO: Call the method to be tested
 
         // Assert
         // TODO: Verify the results
