@@ -33,8 +33,4 @@ class CallServiceV0Test {
         callServiceV0.internal();
     }
 
-    @Test
-    void internal() {
-
-    }
 }
